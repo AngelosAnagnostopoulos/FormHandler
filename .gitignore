@@ -3,7 +3,6 @@
 #
 
 /.vscode
-superafm.sql
 
 # Binaries for programs and plugins
 *.exe
