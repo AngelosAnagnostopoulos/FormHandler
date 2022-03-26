@@ -17,5 +17,6 @@ And visit localhost:8080
 ### Known issues:
 - The ID field doesnt restart from 0 if containers are restarded after manual deletion of data in database. Fix: Check latest db entry and use ID dynamically?
 - There is no event handling functionality at the moment so the form only gets submitted once because i am trying to do this in go not in js. Fix: Implement an event function.
+- IMPORTANT! There isn't a check to see if the database or table exist and in case of multiple runs, the mysql contaimer just dies (check logs).
 
 ###### No html content is my own, it is all templates taken from html5up.net and w3docs make the page look pretty and not look at a blank white page while testing.
