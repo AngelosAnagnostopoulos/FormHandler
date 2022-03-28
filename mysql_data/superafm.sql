@@ -1,7 +1,7 @@
-CREATE DATABASE golang_test;
+CREATE DATABASE IF NOT EXISTS golang_test;
 USE golang_test;
 
-CREATE TABLE Person (
+CREATE TABLE IF NOT EXISTS Person (
     ID int NOT NULL PRIMARY KEY AUTO_INCREMENT, 
     fname varchar(255) NOT NULL,
     email varchar(255),
