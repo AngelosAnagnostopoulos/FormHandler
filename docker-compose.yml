@@ -24,7 +24,7 @@ services:
     depends_on:
       - project_database
     ports:
-      - "8081:8080"
+      - "8080:8080"
     networks:
       - backend
     volumes:
