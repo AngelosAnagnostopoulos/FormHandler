@@ -9,4 +9,4 @@ CREATE TABLE IF NOT EXISTS Person (
     city varchar(255)
 );
 
-INSERT INTO Person VALUES (1, "Kwstas", "test@gmail.com", "testPhone", "testCity")
+INSERT INTO Person VALUES (1, "Kwstas", "test@gmail.com", "testPhone", "testCity");

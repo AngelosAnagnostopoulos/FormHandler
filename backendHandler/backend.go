@@ -15,6 +15,7 @@ const (
 	db_name  = "golang_test"
 )
 
+
 /*Make initial connection to backend*/
 func ConnectToDb() *sql.DB {
 	fmt.Println("Opening database connection")
