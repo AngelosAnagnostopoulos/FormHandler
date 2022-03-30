@@ -11,7 +11,7 @@ services:
     networks:
       - backend
     volumes:
-      - ./mysql_data/superafm.sql:/docker-entrypoint-initdb.d/superafm.sql
+      - ./mysql_data/data.sql:/docker-entrypoint-initdb.d/data.sql
     environment:
       - MYSQL_DATABASE=golang_test
       - MYSQL_ROOT_PASSWORD=1234
@@ -19,19 +19,16 @@ services:
       - MYSQL_PASSWORD=1234
     
   project_server:
-    build: .
+    image: angelosanag/project_server
     container_name: project_server
     depends_on:
       - project_database
     ports:
-      - "8080:8080"
+      - 8080:8080
     networks:
       - backend
-    volumes:
-      - my-server:/app  
 volumes:
   my-db:
-  my-server:
 
 networks:
   backend:

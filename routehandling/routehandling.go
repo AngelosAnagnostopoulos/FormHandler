@@ -10,12 +10,14 @@ import (
 
 /*Reads an html form for data and updates a person type*/
 func readForm(r *http.Request, person *orm.Person) {
+	fmt.Println("Hello from readForm")
 	person.Name = r.FormValue("name")
 	person.Email = r.FormValue("email")
 	person.City = r.FormValue("city")
 	person.Phone = r.FormValue("phone")
 
 	db := database.ConnectToDb()
+	fmt.Println("Connecting to db from readForm")
 	database.PutData(db, person)
 	database.GetData(db)
 	db.Close()
