@@ -27,6 +27,16 @@ services:
       - 8080:8080
     networks:
       - backend
+
+  python_service:
+    image: angelosanag/python_service
+    container_name: python_service
+    depends_on:
+      - project_database
+    ports:
+      - 5000:5000
+    networks:
+      - backend
 volumes:
   my-db:
 
